@@ -24,7 +24,7 @@ const Card: React.FC<CardProps> = ({
 				src={imageUrl}
 				alt={title}
 			/>
-			<div className="relative px-6 py-4">
+			<div className="px-6 py-4">
 				<div className="font-bold text-lg text-monochrome-800 mb-2">
 					{title}
 				</div>
