@@ -29,7 +29,7 @@ const About: React.FC = () => {
 					<div className="flex flex-col w-full">
 						<div className="flex flex-col items-center justify-center bg-monochrome-400 rounded-2xl shadow-monochrome-500 shadow-md">
 							<Image
-								src="/images/avatar.jpg"
+								src="@/images/avatar.jpg"
 								alt="Avatar"
 								width={162}
 								height={300}
@@ -63,19 +63,20 @@ const About: React.FC = () => {
 								Hello! My name is Arthur, a 36-year-old IT enthusiast based in
 								Saint Petersburg. My passion for technology dates back to the
 								days when most websites were built on WordPress, although at the
-								time I didn't fully commit to an IT career.
-								<br /> <br /> Over the years, I've amassed a broad range of
-								development experience. I've developed mobile applications for
-								both iOS and Android, built websites, and written and deployed
-								blockchain contracts (without liquidity). My database expertise
-								includes working with MySQL, MongoDB, and PostgreSQL, utilizing
-								Prisma ORM. Additionally, I have experience in setting up and
-								deploying applications on remote servers. <br /> <br />{' '}
-								Recently, I've decided to fully immerse myself in development.
-								I'm actively updating my GitHub with new projects and working on
-								a portfolio website. I'm currently seeking a junior frontend
-								developer position to leverage my skills and knowledge, and to
-								continue growing professionally in this field.
+								time I didn&apos;t fully commit to an IT career.
+								<br /> <br /> Over the years, I&apos;ve amassed a broad range of
+								development experience. I&apos;ve developed mobile applications
+								for both iOS and Android, built websites, and written and
+								deployed blockchain contracts (without liquidity). My database
+								expertise includes working with MySQL, MongoDB, and PostgreSQL,
+								utilizing Prisma ORM. Additionally, I have experience in setting
+								up and deploying applications on remote servers. <br /> <br />{' '}
+								Recently, I&apos;ve decided to fully immerse myself in
+								development. I&apos;m actively updating my GitHub with new
+								projects and working on a portfolio website. I&apos;m currently
+								seeking a junior frontend developer position to leverage my
+								skills and knowledge, and to continue growing professionally in
+								this field.
 							</p>
 						</div>
 					</div>

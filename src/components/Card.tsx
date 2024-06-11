@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 import { FaReact } from 'react-icons/fa'
@@ -21,7 +22,7 @@ const Card: React.FC<CardProps> = ({
 }) => {
 	return (
 		<div className="max-w-sm flex flex-col rounded-3xl bg-monochrome-400 overflow-hidden shadow-lg shadow-monochrome-500 m-4 transition-transform transform md:hover:scale-105">
-			<img
+			<Image
 				className="w-full filter grayscale transition duration-500 ease-in-out hover:filter-none"
 				src={imageUrl}
 				alt={title}
