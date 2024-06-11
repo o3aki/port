@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
+import { FaGithub, FaTelegram } from 'react-icons/fa6'
 
 const Navbar = () => {
 	const pathname = usePathname()
@@ -26,8 +27,22 @@ const Navbar = () => {
 					</button>
 				</div>
 				<div
-					className={`md:flex justify-end gap-8 mr-8 md:mr-20 ${isOpen ? 'flex' : 'hidden'} flex-col md:flex-row absolute md:static top-14 left-0 w-full md:w-auto bg-monochrome-400 md:bg-transparent rounded-b-2xl`}
+					className={`md:flex justify-end gap-8 md:mr-20 ${isOpen ? 'flex' : 'hidden'} flex-col md:flex-row absolute md:static top-14 left-0 w-full md:w-auto bg-monochrome-400 md:bg-transparent rounded-b-2xl`}
 				>
+					<div
+						className={`flex items-center justify-between gap-4 ${isOpen ? 'hidden' : ''}  `}
+					>
+						<div className="flex items-center justify-center">
+							<Link href="https://t.me/arthurdaniyarov">
+								<FaTelegram className="w-5 h-5" />
+							</Link>
+						</div>
+						<div className="flex items-center justify-center">
+							<Link href="https://github.com/o3aki">
+								<FaGithub className="w-5 h-5" />
+							</Link>
+						</div>
+					</div>
 					<nav>
 						<ul className="flex flex-col md:flex-row items-center gap-8">
 							<li>

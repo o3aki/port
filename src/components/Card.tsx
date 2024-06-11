@@ -9,6 +9,7 @@ interface CardProps {
 	description: string
 	imageUrl: string
 	projectUrl: string
+	gitUrl: string
 }
 
 const Card: React.FC<CardProps> = ({
@@ -16,6 +17,7 @@ const Card: React.FC<CardProps> = ({
 	imageUrl,
 	projectUrl,
 	description,
+	gitUrl,
 }) => {
 	return (
 		<div className="max-w-sm flex flex-col rounded-3xl bg-monochrome-400 overflow-hidden shadow-lg shadow-monochrome-500 m-4 transition-transform transform md:hover:scale-105">
@@ -49,6 +51,14 @@ const Card: React.FC<CardProps> = ({
 						size={24}
 					/>
 				</div>
+				<a
+					href={gitUrl}
+					className="inline-block bg-monochrome-200 hover:bg-monochrome-700 hover:text-monochrome-50 text-monochrome-700 font-bold py-2 px-4 rounded-lg"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					GitHub
+				</a>
 				<a
 					href={projectUrl}
 					className="inline-block bg-monochrome-200 hover:bg-monochrome-700 hover:text-monochrome-50 text-monochrome-700 font-bold py-2 px-4 rounded-lg"

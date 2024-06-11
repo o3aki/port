@@ -1,70 +1,87 @@
+import IconCard from '@/components/IconCard'
 import Image from 'next/image'
+import React from 'react'
+
 import { AiOutlineJavaScript } from 'react-icons/ai'
 import { DiMysql, DiPostgresql } from 'react-icons/di'
 import { FaReact } from 'react-icons/fa'
 import { FaCss3Alt, FaGithubAlt, FaHtml5 } from 'react-icons/fa6'
 import { RiNextjsLine, RiTailwindCssFill } from 'react-icons/ri'
-import { SiMongodb, SiPrisma, SiVitepress } from 'react-icons/si'
+import { SiPrisma, SiVitepress } from 'react-icons/si'
 import { TbBrandTypescript } from 'react-icons/tb'
 
-const About = () => {
+const About: React.FC = () => {
+	const icons = [FaHtml5, FaCss3Alt, AiOutlineJavaScript, FaReact]
+
+	const icons2 = [
+		TbBrandTypescript,
+		RiNextjsLine,
+		RiTailwindCssFill,
+		FaGithubAlt,
+	]
+
+	const icons3 = [SiPrisma, SiVitepress, DiMysql, DiPostgresql]
+
 	return (
-		<>
-			<div className="flex items-center justify-center mt-14">
-				<div className="flex items-center justify-center bg-monochrome-200 w-[1280px] h-14 rounded-2xl shadow-monochrome-400 shadow-md">
-					<h1 className="text-2xl text-monochrome-600">ABOUT ME</h1>
-				</div>
-			</div>
-			<div className="flex items-center justify-center mt-14">
-				<div className="flex items-center justify-between w-[1280px]">
-					<div className="items-center justify-start">
-						<div className="flex items-center justify-center bg-monochrome-400 w-[600px] h-100 rounded-2xl shadow-monochrome-500 shadow-md">
+		<div className="flex items-center justify-center mt-14 md:mx-10 lg:mx-20">
+			<div className="flex flex-col lg:flex-row lg:justify-between lg:gap-14 w-full max-w-screen-xl">
+				<div className="flex flex-col justify-start items-center lg:items-start w-full lg:w-1/2">
+					<div className="flex flex-col w-full">
+						<div className="flex flex-col items-center justify-center bg-monochrome-400 rounded-2xl shadow-monochrome-500 shadow-md">
 							<Image
 								src="/images/avatar.jpg"
 								alt="Avatar"
 								width={162}
 								height={300}
-								className="rounded-full mt-14 mb-14 shadow-md shadow-monochrome-500"
+								className="rounded-full mt-10 shadow-md shadow-monochrome-500"
 							/>
+							<p className="mt-4 text-xl">Arthur Daniyarov</p>
+							<p className="mb-10 mt-4 text-md text-monochrome-50 ">ABOUT ME</p>
 						</div>
-					</div>
-					<div className="items-center justify-end">
-						<div className="flex items-center justify-center bg-monochrome-300 w-[600px] h-100 rounded-2xl shadow-monochrome-500 shadow-md">
-							<div>
-								<p className="text-xl text-monochrome-600 leading-relaxed m-14 mb-14">
-									Hi, I'm <strong>Arthur Daniyarov</strong>, a passionate web
-									developer with a knack for creating dynamic and responsive web
-									applications. I have a junior background in modern web
-									technologies and love to bring ideas to life in the browser.
-								</p>
+						<div className="flex items-center justify-center mt-10">
+							<div className="flex items-center justify-center">
+								<h1 className="text-2xl text-monochrome-600">SKILLS</h1>
+							</div>
+						</div>
+						<div className="flex flex-col justify-center mt-4 gap-4 w-full">
+							<div className="flex flex-row items-center justify-center gap-4">
+								<IconCard icons={icons} className="w-14 h-14 " />
+							</div>
+							<div className="flex flex-row items-center justify-center gap-4">
+								<IconCard icons={icons2} className="w-14 h-14" />
+							</div>
+							<div className="flex flex-row items-center justify-center gap-4">
+								<IconCard icons={icons3} className="w-14 h-14" />
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className="flex items-center justify-center mt-14">
-				<div className="flex items-center justify-center bg-monochrome-200 w-[1280px] h-14 rounded-2xl shadow-monochrome-400 shadow-md">
-					<h1 className="text-2xl text-monochrome-600">SKILLS</h1>
+				<div className="flex items-center justify-center w-full lg:w-1/2 mt-10 lg:mt-0">
+					<div className="flex items-center justify-center bg-monochrome-600 w-[600px] rounded-2xl shadow-monochrome-800 shadow-md">
+						<div>
+							<p className="text-lg text-monochrome-50 leading-relaxed m-14 px-4 py-4">
+								Hello! My name is Arthur, a 36-year-old IT enthusiast based in
+								Saint Petersburg. My passion for technology dates back to the
+								days when most websites were built on WordPress, although at the
+								time I didn't fully commit to an IT career.
+								<br /> <br /> Over the years, I've amassed a broad range of
+								development experience. I've developed mobile applications for
+								both iOS and Android, built websites, and written and deployed
+								blockchain contracts (without liquidity). My database expertise
+								includes working with MySQL, MongoDB, and PostgreSQL, utilizing
+								Prisma ORM. Additionally, I have experience in setting up and
+								deploying applications on remote servers. <br /> <br />{' '}
+								Recently, I've decided to fully immerse myself in development.
+								I'm actively updating my GitHub with new projects and working on
+								a portfolio website. I'm currently seeking a junior frontend
+								developer position to leverage my skills and knowledge, and to
+								continue growing professionally in this field.
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div className="flex items-center justify-center mt-14">
-				<div className="flex items-center justify-center bg-monochrome-200 w-[1280px] h-56 rounded-2xl shadow-monochrome-400 shadow-md gap-4">
-					<FaHtml5 className="w-14 h-14 px-1 py-1 rounded-full shadow-monochrome-500 shadow-sm" />
-					<FaCss3Alt className="w-14 h-14 px-1 py-1 rounded-full shadow-monochrome-500 shadow-sm" />
-					<AiOutlineJavaScript className="w-14 h-14 px-1 py-1 rounded-full shadow-monochrome-500 shadow-sm" />
-					<FaReact className="w-14 h-14 px-1 py-1 rounded-full shadow-monochrome-500 shadow-sm" />
-					<RiNextjsLine className="w-14 h-14 px-1 py-1 rounded-full shadow-monochrome-500 shadow-sm" />
-					<SiVitepress className="w-14 h-14 px-1 py-1 rounded-full shadow-monochrome-500 shadow-sm" />
-					<TbBrandTypescript className="w-14 h-14 px-1 py-1 rounded-full shadow-monochrome-500 shadow-sm" />
-					<RiTailwindCssFill className="w-14 h-14 px-1 py-1 rounded-full shadow-monochrome-500 shadow-sm" />
-					<SiPrisma className="w-14 h-14 px-1 py-1 rounded-full shadow-monochrome-500 shadow-sm" />
-					<SiMongodb className="w-14 h-14 px-1 py-1 rounded-full shadow-monochrome-500 shadow-sm" />
-					<DiMysql className="w-14 h-14 px-1 py-1 rounded-full shadow-monochrome-500 shadow-sm" />
-					<DiPostgresql className="w-14 h-14 px-1 py-1 rounded-full shadow-monochrome-500 shadow-sm" />
-					<FaGithubAlt className="w-14 h-14 px-1 py-1 rounded-full shadow-monochrome-500 shadow-sm" />
-				</div>
-			</div>
-		</>
+		</div>
 	)
 }
 
