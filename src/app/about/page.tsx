@@ -29,7 +29,7 @@ const About: React.FC = () => {
 					<div className="flex flex-col w-full">
 						<div className="flex flex-col items-center justify-center bg-monochrome-400 rounded-2xl shadow-monochrome-500 shadow-md">
 							<Image
-								src="@/images/avatar.jpg"
+								src="/images/avatar.png"
 								alt="Avatar"
 								width={162}
 								height={300}
