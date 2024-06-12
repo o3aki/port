@@ -1,3 +1,5 @@
+// Card.tsx
+import { CardProps } from '@/app/projects/types' // Import the type
 import Image from 'next/image'
 import React from 'react'
 
@@ -5,50 +7,41 @@ import { FaReact } from 'react-icons/fa'
 import { RiNextjsLine, RiTailwindCssFill } from 'react-icons/ri'
 import { TbBrandTypescript } from 'react-icons/tb'
 
-interface CardProps {
-	title: string
-	description: string
-	imageUrl: string
-	projectUrl: string
-	gitUrl: string
-}
-
 const Card: React.FC<CardProps> = ({
 	title,
 	imageUrl,
 	projectUrl,
 	description,
 	gitUrl,
+	width,
+	height,
 }) => {
 	return (
-		<div className="max-w-sm flex flex-col rounded-3xl bg-monochrome-400 overflow-hidden shadow-lg shadow-monochrome-500 m-4 transition-transform transform md:hover:scale-105">
+		<div className="max-w-sm flex flex-col rounded-3xl bg-monochrome-600 overflow-hidden shadow-md shadow-monochrome-500 m-4 transition-transform transform md:hover:scale-105">
 			<Image
 				className="w-full filter grayscale transition duration-500 ease-in-out hover:filter-none"
 				src={imageUrl}
 				alt={title}
+				width={width}
+				height={height}
 			/>
 			<div className="px-6 py-4">
-				<div className="font-bold text-lg text-monochrome-800 mb-2">
-					{title}
-				</div>
+				<div className="font-bold text-lg text-monochrome-50 mb-2">{title}</div>
 				<p className="text-monochrome-50 text-base">{description}</p>
 			</div>
 			<div className="flex justify-between px-4 pt-4 pb-4 mt-auto">
 				<div className="flex items-center space-x-2 px-2 py-2">
-					<FaReact
-						className="text-monochrome-700 hover:animate-pulse"
-						size={24}
-					/>
+					<FaReact className="text-pink-400 hover:animate-pulse" size={24} />
 					<RiNextjsLine
-						className="text-monochrome-700 hover:animate-pulse"
+						className="text-pink-400 hover:animate-pulse"
 						size={24}
 					/>
 					<TbBrandTypescript
-						className="text-monochrome-700 hover:animate-pulse"
+						className="text-pink-400 hover:animate-pulse"
 						size={24}
 					/>
 					<RiTailwindCssFill
-						className="text-monochrome-700 hover:animate-pulse"
+						className="text-pink-400 hover:animate-pulse"
 						size={24}
 					/>
 				</div>

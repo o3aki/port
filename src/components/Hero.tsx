@@ -1,13 +1,16 @@
 import Image from 'next/image'
-import heroSvg from '../../public/images/hero.svg' // Adjust the path as needed
+import heroSvg from '../../public/images/hero.png' // Adjust the path as needed
 
 const Hero = () => {
 	return (
-		<div className="absolute bottom-0 flex justify-center">
-			<div className="">
-				<Image src={heroSvg} alt="Hero" width={800} height={200} />
+		<>
+			<div className="flex items-center w-[1280px] justify-center mt-3 ">
+				<div className="">
+					<Image src={heroSvg} alt="Hero" width={726} height={200} />
+				</div>
+				<div></div>
 			</div>
-		</div>
+		</>
 	)
 }
 

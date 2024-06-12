@@ -45,7 +45,7 @@ const Page = () => {
 
 	return (
 		<>
-			<div className="flex items-center justify-center mt-32">
+			<div className="flex items-center justify-center mt-36">
 				<div className="flex items-center justify-between gap-4">
 					<div className="flex items-center justify-center bg-monochrome-400 w-14 h-14 rounded-xl">
 						<Link href="https://t.me/O3AKII">

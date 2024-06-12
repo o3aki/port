@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { Metadata } from 'next'
 import { Fira_Sans } from 'next/font/google'
@@ -21,6 +22,7 @@ export default function RootLayout({
 			<body className={firaSans.className}>
 				<Header />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	)

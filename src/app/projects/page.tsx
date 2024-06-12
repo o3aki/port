@@ -1,7 +1,9 @@
-import Card from '@/components/Card'
+// Page.tsx
+import ProjectSection from '@/components/ProjectSection'
 import React from 'react'
+import { Project } from './types' // Import the type
 
-const projectsYou = [
+const lessonProjects: Project[] = [
 	{
 		title: 'Bank Web Application',
 		description:
@@ -9,6 +11,8 @@ const projectsYou = [
 		imageUrl: '/images/bank.png',
 		projectUrl: 'https://bankapp-three.vercel.app/',
 		gitUrl: 'https://github.com/o3aki/bank_aposhe',
+		width: 600,
+		height: 400,
 	},
 	{
 		title: 'GPT OpenAI Web Application',
@@ -16,6 +20,8 @@ const projectsYou = [
 		imageUrl: '/images/gpt3.png',
 		projectUrl: 'https://gpt3-mu-silk.vercel.app/',
 		gitUrl: 'https://github.com/o3aki/gpt3_o3aki',
+		width: 600,
+		height: 400,
 	},
 	{
 		title: 'CouCou a Twitter clone',
@@ -23,63 +29,29 @@ const projectsYou = [
 		imageUrl: '/images/cou.png',
 		projectUrl: 'https://cou-three.vercel.app/',
 		gitUrl: 'https://github.com/o3aki/cou',
+		width: 600,
+		height: 400,
 	},
 ]
 
-const projects = [
+const projects: Project[] = [
 	{
-		title: 'Bank Web Application',
+		title: 'Portfolio Web Application',
 		description:
 			'Responsive Web Portfolio consisting of a stunning hero section, high-quality assets and gradients, business stats, reusable feature sections with call-to-action buttons, and more!',
-		imageUrl: '/images/portfolio.jpg',
+		imageUrl: '/images/portfolio.png',
 		projectUrl: 'https://arthurdaniyarov.ru',
 		gitUrl: 'https://github.com/o3aki/port',
+		width: 600,
+		height: 400,
 	},
 ]
 
 const Page: React.FC = () => {
 	return (
 		<>
-			<div className="flex items-center justify-center mt-14">
-				<h1 className="text-3xl font-bold text-monochrome-700">My Projects</h1>
-			</div>
-			<div className="flex items-center justify-center ">
-				<div className="flex justify-center w-[1280px] mt-10">
-					<div className="flex flex-wrap gap-4 justify-center">
-						{projects.map((project, index) => (
-							<Card
-								key={index}
-								title={project.title}
-								description={project.description}
-								imageUrl={project.imageUrl}
-								projectUrl={project.projectUrl}
-								gitUrl={project.gitUrl}
-							/>
-						))}
-					</div>
-				</div>
-			</div>
-			<div className="flex items-center justify-center mt-10">
-				<h1 className="text-3xl font-bold text-monochrome-700">
-					Projects by lessons
-				</h1>
-			</div>
-			<div className="flex items-center justify-center ">
-				<div className="flex justify-center w-[1280px] mt-10">
-					<div className="flex flex-wrap gap-4 justify-center">
-						{projectsYou.map((project, index) => (
-							<Card
-								key={index}
-								title={project.title}
-								description={project.description}
-								imageUrl={project.imageUrl}
-								projectUrl={project.projectUrl}
-								gitUrl={project.gitUrl}
-							/>
-						))}
-					</div>
-				</div>
-			</div>
+			<ProjectSection title="My Projects" projects={projects} />
+			<ProjectSection title="Projects by lessons" projects={lessonProjects} />
 		</>
 	)
 }

@@ -15,7 +15,7 @@ const Navbar = () => {
 
 	return (
 		<div className="flex items-center justify-center">
-			<div className="flex items-center justify-between bg-monochrome-400 w-[1280px] h-14 rounded-b-2xl shadow-monochrome-500 shadow-lg  relative">
+			<div className="flex items-center justify-between bg-monochrome-400 w-[1280px] h-20 rounded-b-3xl shadow-monochrome-500 shadow-md relative mb-14">
 				<div className="flex justify-start gap-8 ml-20 md:ml-20">
 					<Link href="/">Arthur D</Link>
 				</div>
@@ -27,7 +27,7 @@ const Navbar = () => {
 					</button>
 				</div>
 				<div
-					className={`md:flex justify-end gap-8 md:mr-20 ${isOpen ? 'flex' : 'hidden'} flex-col md:flex-row absolute md:static top-14 left-0 w-full md:w-auto bg-monochrome-400 md:bg-transparent rounded-b-2xl`}
+					className={`md:flex justify-end gap-8 md:mr-20 ${isOpen ? 'flex' : 'hidden'} flex-col md:flex-row absolute md:static top-14 left-0 w-full md:w-auto bg-monochrome-400 md:bg-transparent rounded-b-3xl`}
 				>
 					<div
 						className={`flex items-center justify-between gap-4 ${isOpen ? 'hidden' : ''}  `}
@@ -44,7 +44,7 @@ const Navbar = () => {
 						</div>
 					</div>
 					<nav>
-						<ul className="flex flex-col md:flex-row items-center gap-8">
+						<ul className="flex flex-col md:flex-row items-center lg:gap-8 md:gap-8 gap-6 lg:mb-0 md:mb-0 mb-10">
 							<li>
 								<Link
 									className={`link ${pathname === '/' ? 'active' : ''}`}
@@ -81,7 +81,7 @@ const Navbar = () => {
 							</li>
 							<li>
 								<Link
-									className={`link ${pathname === '/about' ? 'active' : ''}`}
+									className={`link ${pathname === '/about' ? 'active' : ''} `}
 									href="/about"
 									style={{
 										color: pathname === '/about' ? '#fafafa' : 'inherit',
